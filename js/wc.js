@@ -26,7 +26,7 @@ function searchComplete(searcher, idVar) {
       var newImg = document.createElement('img');
       // There is also a result.url property which has the escaped version
       newImg.src = result.tbUrl;
-
+	document.getElementById("image"+idVar.split("-")[1]).value  = result.tbUrl;
       //imgContainer.appendChild(title);
       imgContainer.appendChild(newImg);
 

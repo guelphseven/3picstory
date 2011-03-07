@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>ThreePicStory</title>
+    <title>3picStory</title>
     <meta name="description" content="">
     <meta name="author" content="The Guelph Seven">
     <meta name="keywords" content="guelph seven guelphseven 8 cubed android startups development coding apps uog uoguelph uwaterloo">
@@ -31,17 +31,20 @@
         </div>
     </header>
     <div id="main">
-        <!-- <form id="roulette-form"> -->
+        <form id="roulette-form" method="get" action="index.php">
             <input id="input-words" type="text" placeholder="Enter Three Words" name="words">
-            <!--<input id="input-submit" type="submit" value="Go!">i-->
+	    <input type="text" id="image1">
+	    <input type="text" id="image2">
+	    <input type="text" id="image3">
+            <input id="input-submit" type="submit" value="Submit!">
 	    <!--<button id="input-submit">Go!</button>-->
+	</form>
 	    <input type="button" id="input" value="Go!">
-        <!-- </form> -->
     </div>
     <footer>
-            <div id="search1">Link</div>
-            <div id="search2">Link</div>
-            <div id="search3">Link</div>
+            <div id="search-1">Link</div>
+            <div id="search-2">Link</div>
+            <div id="search-3">Link</div>
     </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
@@ -59,9 +62,9 @@
 		$("#input").click(function(){
 			images = $("#input-words").val().split(" ");
 			alert(images);
-			load_up(images[0], "search1");
-			load_up(images[1], "search2");
-			load_up(images[2], "search3");
+			load_up(images[0], "search-1");
+			load_up(images[1], "search-2");
+			load_up(images[2], "search-3");
 		})
 
 	</script>   

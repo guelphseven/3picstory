@@ -16,10 +16,10 @@ function stripProtocol($url)
 	return preg_replace("/^http(s)?:\/\//", "", $url);
 }
 
-$postname="Dude";
-$image1="http://guelphseven.com/img/thumb_paul.png";
-$image2="http://guelphseven.com/img/thumb_luke.png";
-$image3="http://guelphseven.com/img/thumb_quincy.png";
+$postname=$_POST['story'];
+$image1=$_POST['image1'];
+$image2=$_POST['image2'];
+$image3=$_POST['image3'];
 
 
 //Validating and reformatting input

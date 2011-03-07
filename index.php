@@ -10,7 +10,7 @@
     <title>3picStory</title>
     <meta name="description" content="">
     <meta name="author" content="The Guelph Seven">
-    <meta name="keywords" content="guelph seven guelphseven 8 cubed android startups development coding apps uog uoguelph uwaterloo">
+    <meta name="keywords" content="guelph seven guelphseven 7 cubed android startups development coding apps uog uoguelph uwaterloo">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -32,7 +32,7 @@
     </header>
     <div id="main">
         <form id="roulette-form" method="get" action="index.php">
-            <input id="input-words" type="text" placeholder="Enter Three Words" name="words">
+            <input id="story" type="text" placeholder="Enter Three Words" name="words">
 	    <input type="text" id="image1">
 	    <input type="text" id="image2">
 	    <input type="text" id="image3">
@@ -60,7 +60,7 @@
 		google.load('search','1');
 		var images;
 		$("#input").click(function(){
-			images = $("#input-words").val().split(" ");
+			images = $("#story").val().split(" ");
 			alert(images);
 			load_up(images[0], "search-1");
 			load_up(images[1], "search-2");

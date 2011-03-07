@@ -25,9 +25,13 @@
 		<h1>ThreePicStory</h1>
         </header>
 	<div id="inputContainer">
-		<div id="description"></div>
+		<div id="description">
+			<p> </p>
+		</div>
 		<div id="inputs">
-			<button></button>
+			<input type="text" placeholder="Enter Three Words">
+			
+			<input type="submit" value="Go!">
 		</div>
 	</div>
 

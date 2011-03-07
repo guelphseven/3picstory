@@ -31,11 +31,11 @@
         </div>
     </header>
     <div id="main">
-        <form id="roulette-form" method="get" action="index.php">
-            <input id="story" type="text" placeholder="Enter Three Words" name="words">
-	    <input type="text" id="image1">
-	    <input type="text" id="image2">
-	    <input type="text" id="image3">
+        <form id="roulette-form" method="post" action="save.php">
+            <input id="story" type="text" placeholder="Enter Three Words" name="story">
+	    <input type="text" id="image1" name="image1">
+	    <input type="text" id="image2" name="image2">
+	    <input type="text" id="image3" name="image3">
             <input id="input-submit" type="submit" value="Submit!">
 	    <!--<button id="input-submit">Go!</button>-->
 	</form>
@@ -61,7 +61,6 @@
 		var images;
 		$("#input").click(function(){
 			images = $("#story").val().split(" ");
-			alert(images);
 			load_up(images[0], "search-1");
 			load_up(images[1], "search-2");
 			load_up(images[2], "search-3");

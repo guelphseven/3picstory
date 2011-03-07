@@ -5,10 +5,10 @@ require 'random.php';
 
 function checkURL($url)
 {
-	if (preg_match("/^http(s)?:\/\/[A-Za-z0-9-\._~:\/?#\[\]@!$&\(\)\*\%\+,;]+$/",$url)==1)
+	//if (preg_match("/^http(s)?:\/\/[A-Za-z0-9-\._~:\/?#\[\]@!$&\(\)\*\%\+,;]+$/",$url)==1)
 		return true;
-	else
-		return false;
+	//else
+	//	return false;
 }
 
 function stripProtocol($url)
@@ -23,7 +23,7 @@ $image3=$_POST['image3'];
 
 
 //Validating and reformatting input
-if (!ctype_alnum($postname) || strlen($postname)<4 || strlen($postname)>64)
+if (preg_match("/^[a-zA-Z0-9 ]+$/",$postname)!=1 || strlen($postname)<4 || strlen($postname)>64)
 {
 	print("Error: Invalid name\n");
 	exit();

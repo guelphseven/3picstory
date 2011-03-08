@@ -14,9 +14,9 @@ function searchComplete(searcher, idVar) {
 
     // Loop through our results, printing them to the page.
     var results = searcher.results;
-    for (var i = 0; i < 1 /*results.length*/; i++) {
+    //for (var i = 0; i < 1 /*results.length*/; i++) {
       // For each result write it's title and image to the screen
-      var result = results[i];
+      var result = results[Math.floor(Math.random()*(results.length-1))];
       var imgContainer = document.createElement('div');
 
       //var title = document.createElement('h2');
@@ -32,13 +32,8 @@ function searchComplete(searcher, idVar) {
 
       // Put our title + image in the content
       contentDiv.appendChild(imgContainer);
-    }
+    //}
   }
-}
-
-function on_load()
-{
-	load_up("batman");
 }
 
 function load_up(image, idVar) {

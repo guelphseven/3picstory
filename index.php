@@ -21,6 +21,8 @@
     <script>google.load('search','1');</script>
     <script src="/js/wc.js"></script>
     <script src="/js/libs/modernizr-1.6.min.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher:'902b6c1a-a165-402f-9a1a-33148768f58e'});</script>
 </head>
 <body>
     <div id="container">
@@ -46,6 +48,8 @@
             <div id="search-2">Link</div>
             <div id="search-3">Link</div>
     </footer>
+
+<span class="st_twitter_hcount" displayText="Tweet"></span><span class="st_facebook_hcount" displayText="Share"></span><span class="st_email_hcount" displayText="Email"></span><span class="st_sharethis_hcount" displayText="Share"></span>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>

@@ -1,21 +1,22 @@
 google.load('search','1');
-var i = 0;
 var images;
 $(document).ready(function(){
-	$("#search").click(function(){
-		images = $("#getwords").val().split(" ");
-		if (images.length == 3){
-		$("#story").val($("#getwords").val());
+
+$("#search").click(function(){
+	var ret = sanitize($("#getwords").val());
+	images = ret.split(" ");
+	if (images.length == 3){
+		$("#story").val(ret);
 		load_up(images[0], "search-1");
 		load_up(images[1], "search-2");
 		load_up(images[2], "search-3");
-		i=0;
-		}else
-		{ 
+	}
+	else
+	{ 
 		//Alert user to stupidness
-		}
-		})
+	}
 	});
+});
 
 /*
  *  How to search for images and restrict them by size.
@@ -23,16 +24,53 @@ $(document).ready(function(){
  *  not attached to a SearchControl.  Thus, we will handle and draw the results
  *  manually.
  */
+function sanitize(words) 
+{
+	var i = 0;
+	var j = 0;
+	var space = 0;
+	var pattern = new RegExp("[^a-zA-Z0-9 ]");
+	var ret = "";
+	//alert("words is -" + words + "-");
+	while(i < words.length)
+	{
+		if(words[i] == ' ' && space == 1)
+		{
+			i += 1;
+		}
+		else if(pattern.test(words[i].toString()))
+		{
+			i += 1;
+		}
+		else
+		{
+			space = 0;
+			if(words[i] == ' ')
+			{
+			  space = 1;
+			}
+			ret += words[i];
+			i += 1;
+		}	
+	}
+	//alert("words became -" + ret.toString() + "-");
+	return ret;
+}
 
 function searchComplete(searcher) {
 	// Check that we got results
+	var i = images.indexOf(searcher.gf)+1;
+	images[i-1] = i;
+	var contentDiv = document.getElementById("search-"+i);
+	contentDiv.innerHTML = '';
+
 	if (searcher.results && searcher.results.length > 0) {
 		//i++; // oh god maintaining state across callback functions!
-		i = images.indexOf(searcher.gf)+1;
-
+//		i = images.indexOf(searcher.gf)+1;
+//		images[i-1] = i;
 		// Grab our content div, clear it.
-		var contentDiv = document.getElementById("search-"+i);//(images.indexOf(searcher.gf)));
-		contentDiv.innerHTML = '';
+//		var contentDiv = document.getElementById("search-"+i);//(images.indexOf(searcher.gf)));
+//		contentDiv.innerHTML = '';
 		// Loop through our results, printing them to the page.
 		var results = searcher.results;
 		//for (var i = 0; i < 1 /*results.length*/; i++) {
@@ -47,13 +85,18 @@ function searchComplete(searcher) {
 		var newImg = document.createElement('img');
 		// There is also a result.url property which has the escaped version
 		newImg.src = result.tbUrl;
-		document.getElementById("image"+(i)).value  = result.tbUrl;
+		document.getElementById("image"+i).value  = result.tbUrl;
 		//imgContainer.appendChild(title);
 		imgContainer.appendChild(newImg);
 
 		// Put our title + image in the content
 		contentDiv.appendChild(imgContainer);
 		//}
+	}
+	else
+	{
+		imgContainer = document.createElement('div');
+		contentDiv.imgContainer(imgContainer);
 	}
 }
 

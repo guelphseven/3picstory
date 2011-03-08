@@ -46,7 +46,7 @@
         <footer>
             <ul>
                 <li>An App in a Day by <a href="http://www.guelphseven.com">The Guelph Seven</a></li>
-                <li><a href="https://github.com/guelphseven/3picstory" target="_blank"><img src="/img/github_32.png" /></a></li>
+                <!--<li><a href="https://github.com/guelphseven/3picstory" target="_blank"><img src="/img/github_32.png" /></a></li>-->
             </ul>
         </footer>
     </div>
@@ -58,18 +58,5 @@
     <script src="/js/libs/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .ipng_bg'); </script>
     <![endif]-->
-    <script src="http://static.getclicky.com/js"></script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/66383767ns.gif" /></p></noscript>
-    <script>
-        var _gaq = [['_setAccount', 'XX-XXXXXXXX-X'], ['_trackPageview']];
-        (function(d, t) {
-            var g = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-            g.async = true;
-            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g, s);
-        })(document, 'script');
-        try{ clicky.init(XXXXXXXX); }catch(err){}
-    </script>
 </body>
 </html>

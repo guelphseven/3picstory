@@ -24,7 +24,7 @@ $image3=$_POST['image3'];
 
 
 //Validating and reformatting input
-if (preg_match("/^[a-zA-Z0-9 ]+$/",$postname)!=1 || strlen($postname)<4 || strlen($postname)>64)
+if (preg_match("/^[a-zA-Z0-9,;!:? ]+$/",$postname)!=1 || strlen($postname)<4 || strlen($postname)>64)
 {
 	print("Error: Invalid name\n");
 	exit();

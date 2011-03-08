@@ -16,52 +16,51 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/style.css">
-    <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/base/jquery-ui.css">-->
-    <script src="http://www.google.com/jsapi"></script>
+    <link  href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css" >
     <script src="/js/libs/modernizr-1.6.min.js"></script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher:'902b6c1a-a165-402f-9a1a-33148768f58e'});</script>
 </head>
 <body>
     <div id="container">
-    <header>
-        <h1><a href="/">3picStory</a></h1>
-        <div id="description">
-            <p>Text!</p>
+        <header>
+            <h1>3picStory</h1>
+            <p>Just Three Words</p>
+            <p>An Epic Tale</p>
+        </header>
+        <div id="main">
+            <form id="entry">
+                <input id="getwords" type="text" placeholder="Enter Three Words" name="getwords">
+                <input type="submit" id="search" onclick="return false;" value="3pic It!">
+            </form>
+            <div id="search-1"></div>
+            <div id="search-2"></div>
+            <div id="search-3"></div>
+            <form id="details" method="post" action="save.php">
+                <input type="hidden" id="image1" name="image1">
+                <input type="hidden" id="story" name="story">
+                <input type="hidden" id="image2" name="image2">
+                <input type="hidden" id="image3" name="image3">
+                <input id="input-submit" type="submit" value="Save!">
+            </form>
         </div>
-    </header>
-    <div id="main">
-        <form id="roulette-form" method="post" action="save.php">
-            <input id="getwords" type="text" placeholder="Enter Three Words" name="getwords">
-	    <input type="hidden" id="image1" name="image1">
-	    <input type="hidden" id="image2" name="image2">
-	    <input type="hidden" id="image3" name="image3">
-	    <input type="hidden" id="story" name="story">
-            <input id="input-submit" type="submit" value="Save!">
-	    <!--<button id="input-submit">Go!</button>-->
-	</form>
-	    <input type="button" id="search" value="3pic It!">
+        <div>
+        <footer>
+            <ul>
+                <li>An App in a Day by <a href="http://www.guelphseven.com">The Guelph Seven</a></li>
+                <li><a href="https://github.com/guelphseven/3picstory" target="_blank"><img src="/img/github_32.png" /></a></li>
+            </ul>
+        </footer>
     </div>
-    <footer>
-            <div id="search-1">Link</div>
-            <div id="search-2">Link</div>
-            <div id="search-3">Link</div>
-    </footer>
-
-<span class="st_twitter_hcount" displayText="Tweet"></span><span class="st_facebook_hcount" displayText="Share"></span><span class="st_email_hcount" displayText="Email"></span><span class="st_sharethis_hcount" displayText="Share"></span>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
-    <!-- <script src="/js/magic.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+    <script src="http://www.google.com/jsapi"></script>
+    <script src="/js/images.js"></script>
     <!--[if lt IE 7 ]>
     <script src="/js/libs/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .ipng_bg'); </script>
     <![endif]-->
     <script src="http://static.getclicky.com/js"></script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/XXXXXXXXns.gif" /></p></noscript>
-
-    <script src="/js/images.js"></script>
- <script>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/66383767ns.gif" /></p></noscript>
+    <script>
         var _gaq = [['_setAccount', 'XX-XXXXXXXX-X'], ['_trackPageview']];
         (function(d, t) {
             var g = d.createElement(t),

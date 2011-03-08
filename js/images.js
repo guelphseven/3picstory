@@ -1,4 +1,4 @@
-google.load('search','1');
+/*google.load('search','1');
 var images;
 $(document).ready(function(){
 
@@ -17,6 +17,7 @@ $("#search").click(function(){
 	}
 	});
 });
+*/
 
 /*
  *  How to search for images and restrict them by size.

@@ -17,8 +17,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/style.css">
     <link  href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css" >
-    <script src="/js/libs/modernizr-1.6.min.js"></script>
-</head>
+   </head>
 <body>
     <div id="container">
         <header>
@@ -53,7 +52,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
     <script src="http://www.google.com/jsapi"></script>
+    <script src="/js/setup.js"></script>
     <script src="/js/images.js"></script>
+    <script src="/js/libs/modernizr-1.6.min.js"></script>
+
     <!--[if lt IE 7 ]>
     <script src="/js/libs/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .ipng_bg'); </script>

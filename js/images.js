@@ -60,7 +60,10 @@ function sanitize(words)
 
 function searchComplete(searcher) {
 	// Check that we got results
-	var i = images.indexOf(searcher.gf)+1;
+	if(images[0] == searcher.gf) i = 1;
+	else if(images[1] == searcher.gf) i = 2;
+	else if(images[2] == searcher.gf) i = 3;
+	else i = -1;
 	images[i-1] = i;
 	var contentDiv = document.getElementById("search-"+i);
 	contentDiv.innerHTML = '';

@@ -1,3 +1,20 @@
+google.load('search','1');
+$(document).ready(function(){
+	var images;
+	$("#search").click(function(){
+		images = $("#getwords").val().split(" ");
+		if (images.length == 3){
+			$("#story").val($("#getwords").val());
+			load_up(images[0], "search-1");
+			load_up(images[1], "search-2");
+			load_up(images[2], "search-3");
+		}else
+		{ 
+			//Alert user to stupidness
+		}
+	})
+});
+
 /*
 *  How to search for images and restrict them by size.
 *  This demo will also show how to use Raw Searchers, aka a searcher that is
@@ -41,9 +58,9 @@ function load_up(image, idVar) {
   var imageSearch = new google.search.ImageSearch();
 
   // Restrict to extra large images only
-  imageSearch.setRestriction(google.search.ImageSearch.RESTRICT_IMAGESIZE,
-                             google.search.ImageSearch.IMAGESIZE_MEDIUM);
-
+  //imageSearch.setRestriction(google.search.ImageSearch.RESTRICT_IMAGESIZE,
+  //                           google.search.ImageSearch.IMAGESIZE_MEDIUM);
+  imageSearch.setResultSetSize(8);
   // Here we set a callback so that anytime a search is executed, it will call
   // the searchComplete function and pass it our ImageSearch searcher.
   // When a search completes, our ImageSearch object is automatically

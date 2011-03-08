@@ -17,9 +17,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/style.css">
     <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/base/jquery-ui.css">-->
-    <script src="http://www.google.com/jsapi">
-    <script>google.load('search','1');</script>
-    <script src="/js/wc.js"></script>
+    <script src="http://www.google.com/jsapi"></script>
     <script src="/js/libs/modernizr-1.6.min.js"></script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher:'902b6c1a-a165-402f-9a1a-33148768f58e'});</script>
@@ -34,14 +32,15 @@
     </header>
     <div id="main">
         <form id="roulette-form" method="post" action="save.php">
-            <input id="story" type="text" placeholder="Enter Three Words" name="story">
-	    <input type="text" id="image1" name="image1">
-	    <input type="text" id="image2" name="image2">
-	    <input type="text" id="image3" name="image3">
-            <input id="input-submit" type="submit" value="Submit!">
+            <input id="getwords" type="text" placeholder="Enter Three Words" name="getwords">
+	    <input type="hidden" id="image1" name="image1">
+	    <input type="hidden" id="image2" name="image2">
+	    <input type="hidden" id="image3" name="image3">
+	    <input type="hidden" id="story" name="story">
+            <input id="input-submit" type="submit" value="Save!">
 	    <!--<button id="input-submit">Go!</button>-->
 	</form>
-	    <input type="button" id="input" value="Go!">
+	    <input type="button" id="search" value="3pic It!">
     </div>
     <footer>
             <div id="search-1">Link</div>
@@ -60,18 +59,8 @@
     <![endif]-->
     <script src="http://static.getclicky.com/js"></script>
     <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/XXXXXXXXns.gif" /></p></noscript>
-	<script>
-		google.load('search','1');
-		var images;
-		$("#input").click(function(){
-			images = $("#story").val().split(" ");
-			load_up(images[0], "search-1");
-			load_up(images[1], "search-2");
-			load_up(images[2], "search-3");
-		})
 
-	</script>   
-
+    <script src="/js/images.js"></script>
  <script>
         var _gaq = [['_setAccount', 'XX-XXXXXXXX-X'], ['_trackPageview']];
         (function(d, t) {

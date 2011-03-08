@@ -9,7 +9,7 @@ if (!isset($_GET['page']))
 	exit();
 }
 $link=$_GET['page'];
-if (!ctype_alnum($link) || strlen($link)!=32)
+if (!ctype_alnum($link) || strlen($link)!=8)
 {
 	print("There's no post here!\n");
 	exit();
@@ -37,12 +37,22 @@ $image3=mysql_result($res, 0, 'image3');
 
 //What the users see
 print("<html>\n");
-print("<br/><br/>\n");
-print("<h1 align=\"center\">$postname</h1><br/>\n");
-print("<p align=\"center\">\n");
-print("<img src=\"http://$image1\" /><img src=\"http://$image2\" /><img src=\"http://$image3\" /><br/><br/>\n");
+?>
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'902b6c1a-a165-402f-9a1a-33148768f58e'});</script>
+
+<?php
+print("<h1>$postname</h1><br/>\n");
+print("<img src=\"http://$image1\" /><br/>\n");
+print("<img src=\"http://$image2\" /><br/>\n");
+print("<img src=\"http://$image3\" /><br/><br/>\n");
 print("http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]);
-print("</p>\n");
+print("<br/>\n");
+?>
+
+<span class="st_twitter_hcount" displayText="Tweet"></span><span class="st_facebook_hcount" displayText="Share"></span><span class="st_email_hcount" displayText="Email"></span><span class="st_sharethis_hcount" displayText="Share"></span>
+
+<?php
 print("</html>");
 
 ?>

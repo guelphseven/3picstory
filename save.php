@@ -5,10 +5,11 @@ require 'random.php';
 
 function checkURL($url)
 {
-	//if (preg_match("/^http(s)?:\/\/[A-Za-z0-9-\._~:\/?#\[\]@!$&\(\)\*\%\+,;]+$/",$url)==1)
+//      ?[A-Za-z0-9\-\._~:\/\?#\[\]@!$&\(\)\*\%\+,;]+$
+	if (preg_match("/^http:\/\/images.google.com\/images\?[^'\"\\\\]+/",$url)==1)
 		return true;
-	//else
-	//	return false;
+	else
+		return false;
 }
 
 function stripProtocol($url)
@@ -48,11 +49,11 @@ if (!$mysql || !mysql_select_db("threepic", $mysql))
 }
 
 //Generating unique link 
-$link=genRandomString(32);
+$link=genRandomString(8);
 $res=mysql_query("select path from posts where path='$link';", $mysql);
 while (mysql_num_rows($res)>=1)
 {
-	$link=genRandomString(32);
+	$link=genRandomString(8);
 	$res=mysql_query("select path from posts where path='$link';", $mysql);
 }
 

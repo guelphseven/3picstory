@@ -1,0 +1,11 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+# Uh no we don't use php >_>
+RewriteRule (index\.php) /?page=$1 [NS,L]
+
+# Not a real place? I don't care!
+RewriteCond %{REQUEST_FILENAME} !-d [OR]
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*) /?page=$1 [NS,L]

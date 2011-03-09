@@ -24,7 +24,7 @@ $(document).ready( function() {
 
     $('#entry').submit(function (event) {
         event.preventDefault();
-        var images = $("#getwords").val().replace(/\s+/g,' ').replace(/[:;,.\\\/\'\"!?&]+/g,' ').split(' ');
+        var images = $("#getwords").val().replace(/[:;,.\'\"!?&]+/g,'').replace(/\s+/g,' ').split(' ');
         if (images.length == 3) {
             var container = $('#result');
             container.addClass('result');

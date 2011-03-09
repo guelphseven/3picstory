@@ -24,7 +24,7 @@ $(document).ready( function() {
 
     $('#entry').submit(function (event) {
         event.preventDefault();
-        var images = $("#getwords").val().replace(/\s+/g,' ').split(' ');
+        var images = $("#getwords").val().replace(/\s+/g,' ').replace(/[:;,.\\\/\'\"!?&]+/g,' ').split(' ');
         if (images.length == 3) {
             var container = $('#result');
             container.addClass('result');
@@ -57,7 +57,7 @@ $(document).ready( function() {
                     image3 : three.attr('src') 
                     }, function(data) {
                         $('#share').find('input').remove();
-                        $('#share').append('<label>Link to this page: <input type="text" value="http://3picstory.com/'+data.replace(/\s+/g,'')+'" /></label>');
+                        $('#share').append('<label>Link to this page: <input type="text" value="'+location.href.replace(/\.(...?)\/.*/,".$1/")+data.replace(/\s+/g,'')+'" /></label>');
                         $('#share').find('input[type="text"]').click(function(){$(this).select();});
                         $('#share').unbind('submit');
                         $('#share').submit(function(e){e.preventDefault();return false;});

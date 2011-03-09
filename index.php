@@ -35,7 +35,7 @@ function doView() {
     $image2='http://' . mysql_result($res, 0, 'image2');
     $image3='http://' . mysql_result($res, 0, 'image3');
     $words = split(' ',$postname);
-    echo '<div id="result" class="result"><div class="thumbs"><span id="one" style="display: inline; "><img style="height:150px;" alt="'.$words[0].'" src="'.$image1.'"></span><span id="two" style="display: inline; "><img style="height:150px;" alt="'.$words[1].'" src="'.$image2.'"></span><span id="three" style="display: inline; "><img style="height:150px;" alt="'.$words[2].'" src="'.$image3.'"></span></div><form id="share"><label>Link to this page: <input type="text" value="http://3picstory.com/'.$link.'" /></label></form></div>';
+    echo '<div id="result" class="result"><div class="thumbs"><span id="one" style="display: inline; "><img style="height:150px;" alt="'.$words[0].'" src="'.$image1.'"></span><span id="two" style="display: inline; "><img style="height:150px;" alt="'.$words[1].'" src="'.$image2.'"></span><span id="three" style="display: inline; "><img style="height:150px;" alt="'.$words[2].'" src="'.$image3.'"></span></div><form id="share"><label>Link to this page: <input type="text" value="http://'.$_SERVER['SERVER_NAME'].'/'.$link.'" /></label></form></div>';
     return true;
 }
 ?>

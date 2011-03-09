@@ -31,7 +31,10 @@ $(document).ready( function() {
             container.empty();
 
             container.append('<div class="thumbs"></div>');
-            container.find('div.thumbs').append('<span id="one">'+images[0]+'</span><span id="two">'+images[1]+'</span><span id="three">'+images[2]+'</span></div>');
+
+            if(container.find('div.thumbs')) {
+                container.find('div.thumbs').append('<span id="one">'+images[0]+'</span><span id="two">'+images[1]+'</span><span id="three">'+images[2]+'</span>');
+            }
             container.append('<form id="share"><input type="submit" value="Share this 3pic!"/></form>');
 
             container.find('div.thumbs').find('span').each(function(){

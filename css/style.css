@@ -121,9 +121,9 @@ header h1 {
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     border-radius: 16px;
-    behavior: url(/PIE.htc);
     outline: none;
-    padding: 0 0.5em;
+    padding: 0 15px;
+    behavior: url(/PIE.htc);
 }
 
 footer li { display: inline-block; height:16px;  margin: 0 1em 0 0; padding: 8px 0;}
